@@ -38,7 +38,7 @@ Os conteúdos utilizados foram:
 - Ensemble Learning.
 - Limpeza e manipulação de dados
 
- <img src="https://github.com/ViniciusGN/CIS-2-Trainee/issues/1#issue-1833841144" width="50" />
+![https://github.com/ViniciusGN/CIS-2-Trainee/issues/1#issue-1833841144]
 
 ### Curiosidade: 
 Você sabia que acredita-se que as vinhas mais antigas do mundo estão localizadas na região da Cachemira, no norte da Índia?
