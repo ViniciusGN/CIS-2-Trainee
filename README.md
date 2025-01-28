@@ -1,43 +1,47 @@
-# 2º Fase Trainee CIS
-Este projeto faz parte do processo Trainee do Computational Inteligence Society (CIS) - IEEE, Capítulo Estudantil, - da Universidade de Brasília (UnB): Semana 2. Aluno: Vinicius Nascimento
+# 2nd Phase of CIS Trainee Program  
+This project is part of the Trainee process of the IEEE Computational Intelligence Society (CIS) Student Chapter at the University of Brasília (UnB): Week 2.  
+**Student**: Vinicius Nascimento  
 
-## a) "Classificação binária para prever se o vinho é tinto ou não":
-O dataset designado foi "Qualidade do Vinho" disponível no link [(Fonte)]([https://drive.google.com/file/d/14Y6ZJYI-sB_T9tHexlg2GCSfLCmC6eQE/view)). Utilizei o método KNN (K-Nearest Neighbours) para verificar se o vinho era tinto com base na classificação binária. A coluna de referência foi a Wine_Is_Red, sendo a última coluna do dataset. O método KNN está disponível através da biblioteca SKLearn do Python, obtendo uma acurácia de 93% com um conjunto de 80% de treinamento e 20% de teste do conjunto de dados fornecido.
+## a) "Binary classification to predict if a wine is red or not":  
+The assigned dataset was "Wine Quality," available at this [link](https://drive.google.com/file/d/14Y6ZJYI-sB_T9tHexlg2GCSfLCmC6eQE/view). I used the KNN (K-Nearest Neighbors) method to determine if a wine was red based on binary classification. The reference column was `Wine_Is_Red`, which is the last column of the dataset. Using the KNN method from the Python SKLearn library, I achieved an accuracy of 93% with an 80%-training and 20%-testing dataset split.
 
-## b) "Classificação multiclasse para prever a qualidade do vinho":
-Para prever a qualidade do vinho, verifiquei que alguns autores de fontes de consulta emitiam uma matriz de correlação dos dados. Após emitir a matriz, é possível observar quais são os fatores que possuem uma correlação de dados com a qualidade do vinho (última coluna). O mapeamento do parâmetro é feito através da relação Número da Coluna-Nome.
-Em seguida, utilizei os conceitos de Randon Forest para verificar o que foi solicitado, já atuando no item d. proposto.
+## b) "Multiclass classification to predict wine quality":  
+To predict wine quality, I noted that some authors from reference sources suggested generating a correlation matrix of the data. After generating the matrix, I identified the factors most correlated with wine quality (the last column). The parameter mapping was done using a Column Number-Name relationship.  
 
-## d) "Feature Importance - Aplicar ao algoritmo Random Forest e determinar quais features do dataset são mais importantes para o problema":
-Após obter uma acurácia de 68%, verificamos que o modelo é insuficiênte para realizar a predição. Extraí a matriz de confusão dos dados para verificar quais classes foram mais acertivas dentro do conjunto de dados, observando que, em geral, o modelo foi capaz de acertar mais os vinhos de classe 3.
-Em seguida, emiti a importância das features do modelo, conforme solicitado.
+Next, I applied the Random Forest algorithm to meet the requirements and proceed to item d.
 
-## e) "Aplicar a normalização nos dados e verificar os efeitos nos modelos":
-Realizei a normalização dos dados e verifiquei que o KNN possuía acurácia de 58.15% e o Randon Forest possuía uma acuáracia de 69%. Verifiquei que alguns autores avaliaram a quantidade de vinhos de cada tipo de classificação de qualidade, e observei que há mais vinhos de classe 6, 5 e 7 respectivamente. Entendi, posteriomente, a importância de verificar o equilibrio no conjunto de dados ao aplicar os conceitos apresentados no item f. 
+## d) "Feature Importance - Apply the Random Forest algorithm and determine which features in the dataset are most important for the problem":  
+After achieving an accuracy of 68%, I concluded that the model was insufficient for reliable prediction. I extracted the confusion matrix to verify which classes were predicted most accurately. The analysis showed that class 3 wines were the most accurately predicted.  
 
-## f) "Aplicar as técnicas de undersampling e oversampling nos dados. Verificar e explicar os efeitos":
-- _"Oversampling (superamostragem): É uma técnica que consiste em aumentar artificialmente o número de instâncias da classe minoritária, para tornar as proporções das classes mais equilibradas. Isso é geralmente feito através da replicação de amostras existentes da classe minoritária ou da geração de novas instâncias sintéticas baseadas nas amostras existentes."_
-- _"Undersampling (subamostragem): É uma técnica que consiste em reduzir o número de instâncias da classe majoritária para alcançar um equilíbrio com a classe minoritária. Isso é realizado removendo aleatoriamente ou selecionando estrategicamente um subconjunto das amostras da classe majoritária."_
-Como as amostras mais próximas da borda do gráfico de frequência do nível de qualidade eram muito menores que os valores das classes 5, 6 e 7, optei por realizar o procedimento de oversampling, que seria mais adequado para o conjunto de dados. Para isso utilizei a biblioteca imblearn que realiza os procedimentos de amostragem (sampling) através de um import.
+Subsequently, I generated the feature importance output as requested.
 
-## g) "Aplicar um dos métodos de Ensemble Learning e comparar os resultados":
-- _"Ensemble Learning, ou aprendizado em conjunto, é uma abordagem no campo de aprendizado de máquina em que múltiplos modelos são combinados para realizar uma tarefa preditiva ou classificatória. Em vez de confiar em um único modelo para fazer uma previsão, o ensemble learning utiliza a sabedoria coletiva de vários modelos para melhorar a precisão e o desempenho geral do sistema."_
+## e) "Apply data normalization and evaluate the effects on the models":  
+I normalized the dataset and observed that the KNN model achieved an accuracy of 58.15%, while the Random Forest model achieved 69%. Additionally, I noticed from reference sources that the number of wines for each quality class was imbalanced, with more wines in classes 6, 5, and 7, respectively. I later understood the importance of dataset balancing, as discussed in item f.
 
-## h) "implementar um KNN utilizando somente numpy":
-Realizado, não foi utilizado a biblioteca Pandas. Achei que a biblioteca seria útil para plotar o gráfico do tipo bloxpot e verificar os dados outliers de algumas features consideradas importantes para a qualidade do vinho, conforme observado na matriz de correlação.
+## f) "Apply undersampling and oversampling techniques to the dataset. Evaluate and explain the effects":  
+- _"Oversampling: This technique artificially increases the number of instances in the minority class to balance class proportions. This is typically done by replicating existing samples or generating new synthetic instances based on the current minority class samples."_  
+- _"Undersampling: This technique reduces the number of instances in the majority class to balance it with the minority class. It is performed by randomly or strategically selecting a subset of the majority class samples."_  
 
-### Observações:
-Os conteúdos utilizados foram:
-- KNN (K-Nearest Neighbours)
-- Support Vector Machine
-- Decision Tree
-- Random Forest
-- Classificação binária
-- Classificação multiclasse
-- Métricas de Avaliação (Cross-validation, Confusion Matrix, Precision e Recall)
-- Ensemble Learning.
-- Limpeza e manipulação de dados
+Since the samples at the edges of the quality level frequency distribution were significantly smaller than the values for classes 5, 6, and 7, I opted to use oversampling as it was more appropriate for the dataset. For this, I utilized the `imblearn` library, which provides sampling methods via import.
 
+## g) "Apply one of the Ensemble Learning methods and compare the results":  
+- _"Ensemble Learning refers to a machine learning approach where multiple models are combined to perform a predictive or classification task. Instead of relying on a single model, ensemble learning leverages the collective wisdom of several models to enhance overall accuracy and system performance."_  
+
+## h) "Implement a KNN using only NumPy":  
+This was completed without using the Pandas library. However, I found that Pandas would have been helpful for plotting boxplot graphs and identifying outliers in some features deemed important for wine quality, as indicated by the correlation matrix.
+
+### Observations:  
+The following concepts and techniques were applied:  
+- KNN (K-Nearest Neighbors)  
+- Support Vector Machine  
+- Decision Tree  
+- Random Forest  
+- Binary Classification  
+- Multiclass Classification  
+- Evaluation Metrics (Cross-validation, Confusion Matrix, Precision, and Recall)  
+- Ensemble Learning  
+- Data cleaning and manipulation  
+```
 ![thinkstockphotos-615269202](https://github.com/ViniciusGN/CIS-2-Trainee/assets/80403948/6cdd6189-8eba-416f-81ba-56f68b9633d6)
 
 ### Curiosidade: 
