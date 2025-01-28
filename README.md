@@ -41,8 +41,8 @@ The following concepts and techniques were applied:
 - Evaluation Metrics (Cross-validation, Confusion Matrix, Precision, and Recall)  
 - Ensemble Learning  
 - Data cleaning and manipulation  
-```
+
 ![thinkstockphotos-615269202](https://github.com/ViniciusGN/CIS-2-Trainee/assets/80403948/6cdd6189-8eba-416f-81ba-56f68b9633d6)
 
-### Curiosidade: 
-Você sabia que acredita-se que as vinhas mais antigas do mundo estão localizadas na região da Cachemira, no norte da Índia?
+### Curiosity:  
+Did you know that it is believed the world's oldest vineyards are located in the Kashmir region, in northern India?
